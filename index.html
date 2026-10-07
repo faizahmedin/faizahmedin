@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         SCREEN 1 — LOADING
+    ================================== -->
+
+    <section id="loading-screen">
+
+        <div class="loading-content">
+
+            <p id="initializing-text">
+                Initializing something special...
+            </p>
+
+            <div class="progress-container">
+
+                <div
+                    id="progress-bar"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+            <div id="progress-number">
+                0%
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         SCREEN 2 — SCANNING
+    ================================== -->
+
+    <section id="scan-screen">
+
+        <!-- Floating hearts -->
+
+        <div class="heart heart1">♡</div>
+        <div class="heart heart2">♡</div>
+        <div class="heart heart3">♡</div>
+        <div class="heart heart4">♡</div>
+        <div class="heart heart5">♡</div>
+        <div class="heart heart6">♡</div>
+        <div class="heart heart7">♡</div>
+
+
+        <!-- Main popup -->
+
+        <div class="scan-box">
+
+            <div id="scan-lines"></div>
+
+            <button id="continue-btn">
+                CONTINUE ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         SCREEN 3 — MAKE A WISH
+    ================================== -->
+
+    <section id="birthday-screen">
+
+        <div class="birthday-content">
+
+            <h2 class="wishes-title">
+                YOU HAVE 3 WISHES
+            </h2>
+
+            <h4 class="wishes-subtitle">
+                Make one before, Blowing the Candle.
+            </h4>
+
+
+            <!-- CAKE -->
+
+            <div class="cake-area">
+
+                <div
+                    id="flame"
+                    class="flame">
+
+                    <span class="flame-hint">
+                        click here
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="candle"
+                    class="candle">
+                </div>
+
+
+                <div class="cake">
+
+                    <div class="cake-top">
+                    </div>
+
+                    <div class="cake-body">
+
+                        <div class="cake-line">
+                        </div>
+
+                        <div class="cake-line">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="plate">
+                </div>
+
+            </div>
+
+
+            <!-- WISH INSTRUCTION -->
+
+<p
+    id="wish-text"
+    class="wish-text">
+
+    Close your eyes... make your wish. ✨
+
+</p>
+
+
+<!-- WISH BOX -->
+
+<div class="wish-box">
+
+    <textarea
+        id="wish-input"
+        placeholder="Enter your wish here..."></textarea>
+
+</div>
+
+
+<p
+    id="wish-status"
+    class="wish-status">
+</p>
+
+            
+
+    </section>
+
+
+
+    <!-- =================================
+         SCREEN 4 — BIRTHDAY REVEAL
+    ================================== -->
+
+    <section id="birthday-reveal">
+
+        <div class="reveal-content">
+
+
+            <!-- SMALL HEADING -->
+
+            <div class="reveal-small-text">
+                TODAY IS YOUR DAY
+            </div>
+
+
+            <!-- MAIN BIRTHDAY HEADING -->
+
+            <h1>
+                HAPPIEST BIRTHDAY
+               
+            </h1>
+
+
+            <!-- HER NAME -->
+
+            <h3 class="birthday-name">
+                 <span>💎</span>
+                FATIMA TU ZAHRA BINT E FAHAD RASHID AHMED CHOHAN
+                
+            </h3>
+
+
+            <!-- HEART -->
+
+            <div class="birthday-heart">
+                🎂
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <p>
+                Today isn't just another date...
+            </p>
+
+
+            <!-- =================================
+                 FURTHER QUESTION
+            ================================== -->
+
+            <div class="further-question">
+
+                <p class="further-text">
+                    Wanna see further? ✨
+                </p>
+
+
+                <div class="further-buttons">
+
+                    <button id="yes-btn">
+                        YES ❤️
+                    </button>
+
+                    <button id="no-btn">
+                        NO
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         FIREWORKS
+    ================================== -->
+
+    <canvas id="fireworks"></canvas>
+
+
+
+    <!-- =================================
+         BIRTHDAY MUSIC
+    ================================== -->
+
+    <audio
+        id="birthday-music"
+        loop>
+
+        <source
+            src="birthday.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

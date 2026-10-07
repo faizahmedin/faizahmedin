@@ -1,0 +1,679 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background: #000;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #3f2925;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.message-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #000;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ARTWORK
+
+   The artwork always keeps its original proportions.
+
+   VERY IMPORTANT:
+   We do NOT use:
+       object-fit: cover
+
+   because that would crop the flowers/bouquet on phones.
+========================================================= */
+
+.artwork {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    background: #000;
+
+    line-height: 0;
+}
+
+
+/* =========================================================
+   ACTUAL IMAGE
+========================================================= */
+
+.birthday-background {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    user-select: none;
+    -webkit-user-drag: none;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   EDITABLE MESSAGE AREA
+
+   The image is 1536 × 1024.
+
+   The blank area is roughly the upper 65% of the image.
+
+   Therefore the text is positioned relative to the image
+   instead of being placed in a separate white box.
+========================================================= */
+
+.message-content {
+    position: absolute;
+
+    top: 7.2%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 72%;
+
+    text-align: center;
+
+    line-height: 1.4;
+
+    z-index: 5;
+
+    color: #3e2925;
+}
+
+
+/* =========================================================
+   TOP DECORATION
+========================================================= */
+
+.top-decoration {
+    margin-bottom: 1.2vw;
+
+    font-size: clamp(10px, 1.3vw, 20px);
+
+    color: #9d693b;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.small-title {
+    margin-bottom: 0.7vw;
+
+    font-size: clamp(7px, 0.75vw, 12px);
+
+    letter-spacing: 5px;
+
+    color: #63453d;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.message-content h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(24px, 4vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    color: #3d2926;
+
+    white-space: nowrap;
+}
+
+.message-content h1 span {
+    color: #9b6341;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin: 1.7vw auto 1.5vw;
+
+    font-size: clamp(9px, 1vw, 16px);
+
+    color: #a06b3c;
+}
+
+.divider span {
+    display: block;
+
+    width: 4vw;
+    max-width: 65px;
+
+    height: 1px;
+
+    background: #a06b3c;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   MESSAGE TEXT
+========================================================= */
+
+.message-text {
+    width: 100%;
+    font-size: clamp(10px, 1.15vw, 18px);
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.message-text p {
+    margin: 0 0 1.25vw;
+}
+
+
+/* =========================================================
+   FINAL BIRTHDAY MESSAGE
+========================================================= */
+
+.message-text .birthday-line {
+    margin-top: 1.5vw;
+
+    margin-bottom: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(19px, 2.6vw, 40px);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    color: #98603f;
+}
+
+.birthday-line span {
+    color: #765278;
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.bottom-decoration {
+    margin-top: 1.2vw;
+
+    font-size: clamp(9px, 1vw, 15px);
+
+    color: #a06b3c;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FOOTER
+
+   This sits near the bottom of the blank area,
+   immediately before the bouquet begins.
+========================================================= */
+
+.page-footer {
+    position: absolute;
+
+    top: 64.2%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 60%;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(7px, 0.7vw, 11px);
+
+    letter-spacing: 5px;
+
+    color: #5f4942;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   BLACK ENDING
+
+   Tiny black section after the image.
+
+   This gives you the little scroll you wanted and makes
+   the page finish naturally instead of stopping abruptly.
+========================================================= */
+
+.black-ending {
+    width: 100%;
+
+    height: 65px;
+
+    background: #000;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   VERY SMALL BLACKISH FADE
+
+   A subtle dark horizontal effect between artwork and
+   the black ending.
+========================================================= */
+
+.black-ending::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 38%;
+
+    height: 18px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    filter: blur(10px);
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .message-content {
+        top: 7%;
+
+        width: 72%;
+    }
+
+    .message-text {
+        font-size: clamp(10px, 1.6vw, 17px);
+
+        line-height: 1.55;
+    }
+
+    .page-footer {
+        top: 64%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .message-content {
+        top: 7%;
+
+        width: 72%;
+    }
+
+
+    .top-decoration {
+        margin-bottom: 5px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .small-title {
+        margin-bottom: 5px;
+
+        font-size: 6px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .message-content h1 {
+        font-size: clamp(18px, 5.4vw, 30px);
+
+        line-height: 1.05;
+    }
+
+
+    .divider {
+        gap: 6px;
+
+        margin-top: 9px;
+        margin-bottom: 8px;
+
+        font-size: 8px;
+    }
+
+    .divider span {
+        width: 25px;
+    }
+
+
+    .message-text {
+        font-size: clamp(7px, 2.25vw, 12px);
+
+        line-height: 1.45;
+    }
+
+
+    .message-text p {
+        margin-bottom: 8px;
+    }
+
+
+    .message-text .birthday-line {
+        margin-top: 9px;
+
+        font-size: clamp(14px, 4vw, 22px);
+    }
+
+
+    .bottom-decoration {
+        margin-top: 8px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .page-footer {
+        top: 64%;
+
+        width: 70%;
+
+        font-size: 5px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .black-ending {
+        height: 55px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .message-content {
+        width: 72%;
+    }
+
+    .message-text {
+        font-size: 7px;
+
+        line-height: 1.4;
+    }
+
+    .message-text p {
+        margin-bottom: 6px;
+    }
+
+    .message-content h1 {
+        font-size: 18px;
+    }
+
+    .page-footer {
+        font-size: 4.5px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .message-content {
+        top: 6%;
+
+        width: 45%;
+    }
+
+    .message-text {
+        font-size: 10px;
+    }
+
+    .message-text p {
+        margin-bottom: 5px;
+    }
+
+    .message-content h1 {
+        font-size: 25px;
+    }
+
+    .page-footer {
+        top: 64%;
+    }
+}
+/* =========================================================
+   MUSIC START BUTTON
+========================================================= */
+
+#music-start-btn {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    padding: 12px 22px;
+
+    background: rgba(45, 20, 15, 0.92);
+
+    border: 1px solid #a06b3c;
+
+    border-radius: 6px;
+
+    color: #e5c8a8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(160, 107, 60, 0.25);
+
+    display: none;
+
+    transition: 0.3s ease;
+}
+
+
+#music-start-btn:hover {
+
+    background: rgba(75, 35, 25, 0.95);
+
+    box-shadow:
+        0 0 20px rgba(160, 107, 60, 0.45);
+
+    transform:
+        translateX(-50%)
+        scale(1.04);
+}
+/* =========================================
+   SEND WISH — LAST PAGE
+========================================= */
+
+.wish-send-area {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 20px 50px;
+
+    background: #000;
+
+    text-align: center;
+}
+
+
+#send-wish-btn {
+
+    padding: 14px 30px;
+
+    background: #320914;
+
+    border: 1px solid #8d1730;
+
+    border-radius: 6px;
+
+    color: #d94a63;
+
+    font-family: monospace;
+
+    font-size: 14px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+#send-wish-btn:hover {
+
+    background: #551020;
+
+    border-color: #b52846;
+
+    box-shadow:
+        0 0 15px rgba(165, 29, 58, 0.45),
+        0 0 30px rgba(120, 5, 30, 0.25);
+
+    transform: scale(1.05);
+
+}
+
+
+#wish-send-status {
+
+    min-height: 20px;
+
+    margin-top: 12px;
+
+    color: #b52846;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+}
